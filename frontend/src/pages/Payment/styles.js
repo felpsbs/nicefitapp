@@ -13,12 +13,11 @@ export default StyleSheet.create({
     box: {
         paddingLeft: 25,
         paddingRight: 25,
-        paddingTop: 20,
+        paddingTop: 20
     },
 
     header: {
         alignItems: 'flex-start',
-        marginBottom: 40
     },
 
     title: {
@@ -33,12 +32,6 @@ export default StyleSheet.create({
         marginBottom: 10,
         color: '#13131a',
         fontWeight: '300',
-    },
-
-    modalities: {
-        fontSize: 20,
-        marginTop: 55,
-        fontWeight: '500'
     },
 
     itemList: {
@@ -57,11 +50,6 @@ export default StyleSheet.create({
         textAlign: 'center'
     },
 
-    modalitieText:{
-        fontSize: 16,
-        fontWeight: '500',
-        textAlign: 'center'
-    },
 
     menu: {
         paddingBottom: 20,
@@ -79,15 +67,31 @@ export default StyleSheet.create({
         padding: 10
     },
 
-    informacoes: {
-        paddingTop: 20,
+    personalList: {
+        backgroundColor: '#42f5ec',
+        height: 100,
+        marginLeft:25,
+        marginRight: 25,
+        marginBottom: 20,
+        borderRadius: 7,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+    },
+
+    icone: {
         paddingLeft: 20
     },
 
-    area: {
-        backgroundColor: '#fff',
-        borderRadius: 7,
-        marginTop: 20,
-        paddingBottom: 20
+    name: {
+        padding: 15,
+        fontSize: 20,
+        marginBottom: 10,
+        marginRight: 20,
+        fontWeight: '600'
+    },
+
+    content: {
+        height: 400
     }
 })

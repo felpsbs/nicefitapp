@@ -6,49 +6,31 @@ import { useNavigation } from "@react-navigation/native";
 
 import styles from "./styles";
 
-const personal = [
+const payment = [
     {
         id: 1,
-        name: 'Thiago',
-        grade: 3.0,
+        name: 'Boleto',
     },
     {
         id: 2,
-        name: 'Maria',
-        grade: 5.0,
+        name: 'Paypal',
     },
     {
         id: 3,
-        name: 'Thomas',
-        grade: 2.5,
-    },
-    {
-        id: 4,
-        name: 'Anderson',
-        grade: 4.3,
-    },
-    {
-        id: 5,
-        name: 'Flavio',
-        grade: 3.0,
-    },
-    {
-        id: 6,
-        name: 'Joana',
-        grade: 3.8,
+        name: 'PagSeguro',
     },
 
 ]
 
-function Persona({name, grade}) {
+function Payment({name}) {
     return (
         <View style={styles.personalList}>
-            <Feather name='user' size={50} style={styles.icone}></Feather>
+            <Feather name='credit-card' size={30} style={styles.icone}></Feather>
             <Text style={styles.name}>{name}</Text>
-            <Text style={styles.grade}>{grade}</Text>
         </View>
     )
 }
+
 
 
 export default function Modalidades() {
@@ -68,10 +50,6 @@ export default function Modalidades() {
         navigation.navigate('User')
     }
 
-    function navigateToChat() {
-        navigation.navigate('Payment')
-    }
-
 
     return (
         <SafeAreaView style={styles.container}>
@@ -79,19 +57,18 @@ export default function Modalidades() {
 
             <View style={styles.box}>
                 <View style={styles.header}>
-                    <Text style={styles.title}>Personal</Text>
-                    <Text style={styles.subtitle}>Quem melhor combina com você?</Text>
+                    <Text style={styles.title}>R$ 120,00</Text>
+                    <Text style={styles.subtitle}>Escolha sua forma de pagamento</Text>
                 </View>
             </View>
 
             <View style = {styles.content}>
+
                 <FlatList
                     style = {styles.itemList}
-                    data={personal}
+                    data={payment}
                     renderItem={({ item }) => (
-                        <TouchableOpacity onPress={() => navigateToChat()}>
-                                <Persona name={item.name} grade={item.grade} />
-                        </TouchableOpacity>
+                        <Payment name={item.name} />
                     )}
                     keyExtractor={item => item.id}
                 >
