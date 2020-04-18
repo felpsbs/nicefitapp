@@ -73,12 +73,12 @@ export default StyleSheet.create({
 
     button:{
         backgroundColor:'#0384fc',
-        marginRight: 120,
-        marginLeft: 120,
+        marginRight: 110,
+        marginLeft: 110,
         marginTop: 80,
         alignItems: 'center',
-        padding: 10,
-        borderRadius: 10
+        padding: 15,
+        borderRadius: 10,
     },
 
     informacoes: {
@@ -99,5 +99,9 @@ export default StyleSheet.create({
         marginLeft: 30,
         padding: 10
     },
+    text:{
+        fontSize: 16,
+        fontWeight: '500'
+    }
 
 })

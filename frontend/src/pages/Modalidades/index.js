@@ -69,7 +69,7 @@ export default function Modalidades() {
     }
 
     function navigateToChat() {
-        navigation.navigate('Payment')
+        navigation.navigate('Chat')
     }
 
 

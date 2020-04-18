@@ -5,7 +5,8 @@ import Discover from './pages/Discover';
 import Calendar from './pages/Calendar';
 import User from './pages/User';
 import Modalidades from './pages/Modalidades'
-import Payment from './pages/Payment'
+import Payment from './pages/Payment';
+import Chat from './pages/Message'
 
 const AppStack = createStackNavigator();
 
@@ -18,6 +19,7 @@ export default function Routes(){
                 <AppStack.Screen name='User' component={User}/>
                 <AppStack.Screen name='Modalities' component={Modalidades}/>
                 <AppStack.Screen name='Payment' component={Payment}/>
+                <AppStack.Screen name='Chat' component={Chat}/>
             </AppStack.Navigator>
         </NavigationContainer>
     )

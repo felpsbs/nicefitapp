@@ -3,7 +3,6 @@ import {SafeAreaView , View, Text, List } from 'react-native';
 import {Feather} from '@expo/vector-icons';
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from "@react-navigation/native";
-import { Avatar } from 'react-native-elements';
 
 import styles from "./styles";
 
@@ -49,16 +48,32 @@ const mensagens = [
 function Conversa({ nome, mensagem, tempo, quantidade }) {
     return (
         <View style={styles.personalList}>
-            <Avatar rounded title="L" size="medium" style={styles.icone}/>
-            <Text style={ styles.name }>{ nome }</Text>
-            <Text style={ styles.name }>{ mensagem }</Text>
+            <View style={styles.row}>
+                <Feather name='user' size={35} style={styles.icone}/>
+                <Text style={ styles.name }>{ nome }</Text>
+            </View>
+            <Text style={ styles.msg }>{ mensagem }</Text>
             <Text style={ styles.grade }>{ tempo }</Text>
-            <Text style={ styles.grade }>{ quantidade }</Text>
+            <Text style={ styles.circle }>{ quantidade }</Text>
         </View>
     )
 }
 
-export default function Discover() {
+export default function Chat() {
+
+    const navigation = useNavigation();
+
+    function navigateToDiscover(){
+        navigation.navigate('Discover')
+    }
+
+    function navigateToCalendar(){
+        navigation.navigate('Calendar')
+    }
+
+    function navigateToProfile(){
+        navigation.navigate('User')
+    }
 
     return (
         <SafeAreaView style={styles.container}>    
@@ -89,7 +104,17 @@ export default function Discover() {
                 </FlatList>
             </View>
 
-            <Text style={ styles.title }>----aqui vem a parte da navegação----</Text>
+            <View style={styles.menu}>
+                    <TouchableOpacity onPress = {() => navigateToDiscover()}>
+                        <Feather name="compass" size={40} style={styles.icon}  ></Feather>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigateToCalendar()}>
+                        <Feather name="calendar" size={40} style={styles.icon}  ></Feather>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigateToProfile()}>
+                        <Feather name="user" size={40} style={styles.icon}  ></Feather>
+                    </TouchableOpacity>
+                </View>
         </SafeAreaView>
     )
 }

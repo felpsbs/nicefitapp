@@ -55,7 +55,7 @@ export default function Discover() {
 
                 <View style={styles.button}>
                     <TouchableOpacity onPress={() => navigateToPayment()}>
-                        <Text>Pagar</Text>
+                        <Text style={styles.text}>Pagar</Text>
                     </TouchableOpacity>
                 </View>
             </View>

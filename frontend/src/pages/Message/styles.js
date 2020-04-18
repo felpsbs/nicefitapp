@@ -75,7 +75,7 @@ export default StyleSheet.create({
         marginRight: 30,
         alignItems: 'center',
         marginLeft: 30,
-        padding: 10
+        padding: 0
     },
 
     informacoes: {
@@ -83,16 +83,49 @@ export default StyleSheet.create({
     },
 
 
+    msg: {
+        padding: 60,
+        fontSize: 18,
+        fontWeight: '400'
+    },
+
     name: {
-        padding: 15,
+        padding: 25,
         fontSize: 20,
-        marginBottom: 28,
         fontWeight: '600'
     },
 
+
     grade: {
-        padding: 15,
+        // paddingLeft: 250,
+        paddingBottom: 10,
+        marginLeft: 15,
         fontSize: 16,
         fontWeight: '400',
     },
+    personalList: {
+        backgroundColor: '#FFF',
+        margin: 20,
+        borderRadius: 10,
+    },
+
+    content:{
+        height: 450
+    },
+
+    icone: {
+        padding: 20,
+    },
+
+    row: {
+        flexDirection: 'row'
+    },
+
+    circle: {
+        color: '#3d7bff',
+        margin: 15,
+        fontWeight: 'bold'
+    }
+
+    
 })
