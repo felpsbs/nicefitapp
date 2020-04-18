@@ -34,6 +34,22 @@ export default StyleSheet.create({
         fontWeight: '300',
     },
 
+    itemList: {
+        marginTop: 15
+    },
+
+    item: {
+        width: 150,
+        backgroundColor: '#42f5ec',
+        borderRadius: 7,
+        paddingTop: 40,
+        paddingBottom: 40,
+        marginRight: 10,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        textAlign: 'center'
+    },
+
 
     menu: {
         paddingBottom: 20,
@@ -49,5 +65,38 @@ export default StyleSheet.create({
         alignItems: 'center',
         marginLeft: 30,
         padding: 10
+    },
+
+    personalList: {
+        backgroundColor: '#42f5ec',
+        height: 100,
+        marginLeft:25,
+        marginRight: 25,
+        marginBottom: 20,
+        borderRadius: 7,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+    },
+
+    icone: {
+        paddingLeft: 10
+    },
+
+    name: {
+        padding: 15,
+        fontSize: 20,
+        marginBottom: 28,
+        fontWeight: '600'
+    },
+
+    grade: {
+        padding: 15,
+        fontSize: 16,
+        fontWeight: '400',
+    },
+
+    content: {
+        height: 400
     }
 })

@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Discover from './pages/Discover';
 import Calendar from './pages/Calendar';
 import User from './pages/User';
+import Modalidades from './pages/Modalidades'
 
 const AppStack = createStackNavigator();
 
@@ -12,8 +13,9 @@ export default function Routes(){
         <NavigationContainer>
             <AppStack.Navigator screenOptions={{headerShown: false}}>
                 <AppStack.Screen name='Discover' component={Discover}/>
-                {/* <AppStack.Screen name='Calendar' component={Calendar}/> */}
-                {/* <AppStack.Screen name='User' component={User}/> */}
+                <AppStack.Screen name='Calendar' component={Calendar}/>
+                <AppStack.Screen name='User' component={User}/>
+                <AppStack.Screen name='Modalities' component={Modalidades}/>
             </AppStack.Navigator>
         </NavigationContainer>
     )

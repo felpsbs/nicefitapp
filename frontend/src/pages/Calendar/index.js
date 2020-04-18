@@ -1,14 +1,29 @@
 import React from 'react';
 import { SafeAreaView, View, Text, List } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
-import { useNavigation } from "@react-navigation/native";
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { Calendar, Agenda } from 'react-native-calendars';
 import styles from './stylesCalendar';
 
 
 
 export default function MyCalendar() {
+
+    const navigation = useNavigation();
+
+
+    function navigateToDiscover(){
+        navigation.navigate('Discover')
+    }
+
+    function navigateToCalendar(){
+        navigation.navigate('Calendar')
+    }
+
+    function navigateToProfile(){
+        navigation.navigate('User')
+    }
 
     return (
         <SafeAreaView style={styles.container}>
@@ -33,13 +48,13 @@ export default function MyCalendar() {
 
 
             <View style={styles.menu}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigateToDiscover()}>
                     <Feather name="compass" size={40} style={styles.icon}  ></Feather>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigateToCalendar()}>
                     <Feather name="calendar" size={40} style={styles.icon}  ></Feather>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigateToProfile()}>
                     <Feather name="user" size={40} style={styles.icon}  ></Feather>
                 </TouchableOpacity>
             </View>

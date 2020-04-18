@@ -53,10 +53,21 @@ export default function Discover() {
 
     const navigation = useNavigation();
 
-    function navigateToCalendar(calendar){
+    function navigateToDiscover(){
+        navigation.navigate('Discover')
+    }
+
+    function navigateToCalendar(){
         navigation.navigate('Calendar')
     }
 
+    function navigateToProfile(){
+        navigation.navigate('User')
+    }
+
+    function navigateToModalities(){
+        navigation.navigate('Modalities')
+    }
 
     return (
         <SafeAreaView style={styles.container}>
@@ -74,10 +85,11 @@ export default function Discover() {
                         showsHorizontalScrollIndicator={false}
                         data={modalidades}
                         renderItem={({ item }) => (
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigateToModalities()}>
                                 <Item name={item.name} />
                             </TouchableOpacity>
                         )}
+                        keyExtractor={item => item.id}
                     >
                     </FlatList>
                 </View>
@@ -90,10 +102,11 @@ export default function Discover() {
                         showsHorizontalScrollIndicator={false}
                         data={classType}
                         renderItem={({ item }) => (
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigateToModalities()}>
                                 <Item name={item.name} />
                             </TouchableOpacity>
                         )}
+                        keyExtractor={item => item.id}
                     >
                     </FlatList>
                 </View>
@@ -101,13 +114,13 @@ export default function Discover() {
             </View >
 
             <View style={styles.menu}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress = {() => navigateToDiscover()}>
                         <Feather name="compass" size={40} style={styles.icon}  ></Feather>
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigateToCalendar()}>
                         <Feather name="calendar" size={40} style={styles.icon}  ></Feather>
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigateToProfile()}>
                         <Feather name="user" size={40} style={styles.icon}  ></Feather>
                     </TouchableOpacity>
                 </View>
