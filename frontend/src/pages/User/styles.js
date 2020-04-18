@@ -76,5 +76,9 @@ export default StyleSheet.create({
         alignItems: 'center',
         marginLeft: 30,
         padding: 10
-    }
+    },
+
+    informacoes: {
+        paddingTop: 10
+    },
 })

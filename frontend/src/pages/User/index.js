@@ -6,17 +6,30 @@ import { useNavigation } from "@react-navigation/native";
 
 import styles from "./styles";
 
+const usuario = {
+    nome: "Lucas Ribeiro",
+    idade: "12/09/1988",
+    email: "lucasribeiro@email.com",
+    cidade: "São Paulo"
+};
 
 export default function Discover() {
 
-
     return (
         <SafeAreaView style={styles.container}>
+            <View style={styles.box}>
+            <View style={styles.header}>
+                <Text style={styles.title}>Perfil</Text>
+            </View>
             <View>
-                <Text>Nome</Text>
-                <Text>Idade</Text>
-                <Text>E-mail</Text>
-                
+                <Avatar rounded title="L" size="medium" />
+            </View>
+            <View>
+                <Text style={styles.informacoes}>Nome: { usuario.nome }</Text>
+                <Text style={styles.informacoes}>Data de nascimento:{ usuario.idade }</Text>
+                <Text style={styles.informacoes}>Email: { usuario.email }</Text>
+                <Text style={styles.informacoes}>Cidade: { usuario.cidade }</Text>
+            </View>
             </View>
         </SafeAreaView>
     )
