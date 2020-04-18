@@ -4,42 +4,40 @@ import {Feather} from '@expo/vector-icons';
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from "@react-navigation/native";
 
-import api from '../../services/api;'
-
 import styles from "./styles";
 
 
 
-// const modalidades = [
-//     {
-//         id: 1,
-//         name: 'Musculação'
-//     },
-//     {
-//         id: 2,
-//         name: 'Funcional'
-//     },
-//     {
-//         id: 3,
-//         name: 'Hiit'
-//     },
-//     {
-//         id: 4,
-//         name: 'Dança'
-//     }
-// ]
+const modalidades = [
+    {
+        id: 1,
+        name: 'Musculação'
+    },
+    {
+        id: 2,
+        name: 'Funcional'
+    },
+    {
+        id: 3,
+        name: 'Hiit'
+    },
+    {
+        id: 4,
+        name: 'Dança'
+    }
+]
 
-// const classType = [
-//     {
-//         id: 1,
-//         name: 'Individual'
-//     },
+const classType = [
+    {
+        id: 1,
+        name: 'Individual'
+    },
 
-//     {
-//         id: 2,
-//         name: 'Grupo'
-//     }
-// ]
+    {
+        id: 2,
+        name: 'Grupo'
+    }
+]
 
 
 
@@ -52,9 +50,6 @@ function Item({ name }) {
 }
 
 export default function Discover() {
-
-    const [modalities, setModalities] = useState([]);
-    const [classType, setClassType] = useState([])
 
     const navigation = useNavigation();
 
@@ -77,17 +72,17 @@ export default function Discover() {
                         style={styles.itemList}
                         horizontal={true}
                         showsHorizontalScrollIndicator={false}
-                        data={modalities}
+                        data={modalidades}
                         renderItem={({ item }) => (
                             <TouchableOpacity>
-                                <Item name={item.nome} />
+                                <Item name={item.name} />
                             </TouchableOpacity>
                         )}
                     >
                     </FlatList>
                 </View>
 
-                {/* <View>
+                <View>
                     <Text style={styles.modalities}>Tipos de aula</Text>
                     <FlatList
                         style={styles.itemList}
@@ -101,7 +96,7 @@ export default function Discover() {
                         )}
                     >
                     </FlatList>
-                </View> */}
+                </View>
 
             </View >
 
