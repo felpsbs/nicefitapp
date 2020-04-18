@@ -1,6 +1,6 @@
 import React from 'react';
-import {SafeAreaView , View, Text, List } from 'react-native';
-import {Feather} from '@expo/vector-icons';
+import { SafeAreaView, View, Text, List } from 'react-native';
+import { Feather } from '@expo/vector-icons';
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
 
 import { useNavigation } from "@react-navigation/native";
@@ -16,7 +16,7 @@ const usuario = {
 
 export default function Discover() {
     const navigation = useNavigation();
-    
+
 
     function navigateToDiscover() {
         navigation.navigate('Discover')
@@ -30,22 +30,34 @@ export default function Discover() {
         navigation.navigate('User')
     }
 
+    function navigateToPayment() {
+        navigation.navigate('Payment')
+    }
+
 
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.box}>
-            <View style={styles.header}>
-                <Text style={styles.title}>Perfil</Text>
-            </View>
-            <View>
-                <Feather name='user' size={60}></Feather>
-            </View>
-            <View style={styles.area}>
-                <Text style={styles.informacoes}>Nome: { usuario.nome }</Text>
-                <Text style={styles.informacoes}>Data de nascimento:{ usuario.idade }</Text>
-                <Text style={styles.informacoes}>Email: { usuario.email }</Text>
-                <Text style={styles.informacoes}>Cidade: { usuario.cidade }</Text>
-            </View>
+                <View style={styles.header}>
+                    <Text style={styles.title}>Perfil</Text>
+                </View>
+                <View>
+                    <Feather name='user' size={60}></Feather>
+                </View>
+                <View style={styles.area}>
+                    <Text style={styles.informacoes}>Nome: {usuario.nome}</Text>
+                    <Text style={styles.informacoes}>Data de nascimento:{usuario.idade}</Text>
+                    <Text style={styles.informacoes}>Email: {usuario.email}</Text>
+                    <Text style={styles.informacoes}>Cidade: {usuario.cidade}</Text>
+
+
+                </View>
+
+                <View style={styles.button}>
+                    <TouchableOpacity onPress={() => navigateToPayment()}>
+                        <Text>Pagar</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
 
 

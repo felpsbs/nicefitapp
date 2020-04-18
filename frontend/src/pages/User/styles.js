@@ -71,12 +71,14 @@ export default StyleSheet.create({
         alignSelf: 'center',
     },
 
-    icon: {
-        justifyContent: 'space-between',
-        marginRight: 30,
+    button:{
+        backgroundColor:'#0384fc',
+        marginRight: 120,
+        marginLeft: 120,
+        marginTop: 80,
         alignItems: 'center',
-        marginLeft: 30,
-        padding: 10
+        padding: 10,
+        borderRadius: 10
     },
 
     informacoes: {
@@ -89,5 +91,13 @@ export default StyleSheet.create({
         borderRadius: 7,
         marginTop: 20,
         paddingBottom: 20
-    }
+    },
+    icon: {
+        justifyContent: 'space-between',
+        marginRight: 30,
+        alignItems: 'center',
+        marginLeft: 30,
+        padding: 10
+    },
+
 })
