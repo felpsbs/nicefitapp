@@ -36,7 +36,7 @@ export default function MyCalendar() {
                 <TouchableOpacity>
                     <Feather name="compass" size={40} style={styles.icon}  ></Feather>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigateToCalendar(calendar)}>
+                <TouchableOpacity>
                     <Feather name="calendar" size={40} style={styles.icon}  ></Feather>
                 </TouchableOpacity>
                 <TouchableOpacity>

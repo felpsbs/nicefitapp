@@ -11,9 +11,7 @@ export default StyleSheet.create({
     },
 
     box: {
-        paddingLeft: 15,
-        paddingRight: 15,
-        paddingTop: 20
+        padding: 20
     },
 
     header: {
@@ -27,39 +25,12 @@ export default StyleSheet.create({
         color: '#13131a',
         fontWeight: 'bold'
     },
+
     subtitle: {
         fontSize: 15,
         marginBottom: 10,
         color: '#13131a',
         fontWeight: '300',
-    },
-
-    modalities: {
-        fontSize: 20,
-        marginTop: 55,
-        fontWeight: '500'
-    },
-
-    itemList: {
-        marginTop: 15
-    },
-
-    item: {
-        width: 150,
-        backgroundColor: '#42f5ec',
-        borderRadius: 7,
-        paddingTop: 40,
-        paddingBottom: 40,
-        marginRight: 10,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        textAlign: 'center'
-    },
-
-    modalitieText:{
-        fontSize: 16,
-        fontWeight: '500',
-        textAlign: 'center'
     },
 
     menu: {
@@ -79,7 +50,7 @@ export default StyleSheet.create({
     },
     calendar: {
         marginTop: 20,
-        marginLeft: 25,
-        marginRight: 25
+        marginLeft: 20,
+        marginRight: 20
     }
 })
