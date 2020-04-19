@@ -6,7 +6,9 @@ import Calendar from './pages/Calendar';
 import User from './pages/User';
 import Modalidades from './pages/Modalidades'
 import Payment from './pages/Payment';
-import Chat from './pages/Message'
+import Chat from './pages/Message';
+import Receipt from './pages/Receipt';
+import Extract from './pages/Extract'
 
 const AppStack = createStackNavigator();
 
@@ -20,6 +22,8 @@ export default function Routes(){
                 <AppStack.Screen name='Modalities' component={Modalidades}/>
                 <AppStack.Screen name='Payment' component={Payment}/>
                 <AppStack.Screen name='Chat' component={Chat}/>
+                <AppStack.Screen name='Receipt' component={Receipt}/>
+                <AppStack.Screen name='Extract' component={Extract}/>
             </AppStack.Navigator>
         </NavigationContainer>
     )

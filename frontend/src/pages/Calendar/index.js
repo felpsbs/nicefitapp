@@ -6,6 +6,8 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { Calendar, Agenda } from 'react-native-calendars';
 import styles from './stylesCalendar';
 
+import logoImg from '../../../assets/logo.jpeg'
+
 
 
 export default function MyCalendar() {

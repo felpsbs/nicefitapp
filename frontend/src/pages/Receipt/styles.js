@@ -27,12 +27,6 @@ export default StyleSheet.create({
         color: '#13131a',
         fontWeight: 'bold'
     },
-    subtitle: {
-        fontSize: 15,
-        marginBottom: 10,
-        color: '#13131a',
-        fontWeight: '300',
-    },
 
     itemList: {
         marginTop: 15
@@ -92,21 +86,47 @@ export default StyleSheet.create({
     },
 
     content: {
-        height: 380
+        height: 400
+    },
+    
+    receipt: {
+        flexDirection: 'row',
     },
 
-    receiptButton: {
+    receiptChoice: {
         backgroundColor: '#fff',
-        padding: 14,
-        marginLeft: '33%',
-        width: 120,
-        alignItems: 'center',
         borderRadius: 6,
-        marginBottom: 10
+        padding: 10,
+        width: 100,
+        alignItems: 'center',
+        marginRight: 125,
+        marginTop: 20,
+        marginBottom: 20
     },
 
-    buttonText: {
-        fontWeight: '600',
+    boxName:{
+        padding: 5,
+        marginRight: '25%',
+    },
+
+    user: {
+        fontSize: 20,
+        fontWeight: '700',
+        marginTop: 10
+        
+    },
+
+    boxPay: {
+        marginTop: 20
+    },
+
+    sport: {
+        fontSize: 20,
+    },
+
+    value: {
+        marginRight: 30,
         fontSize: 16,
+        fontWeight: '500'
     }
 })

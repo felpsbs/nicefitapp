@@ -8,34 +8,53 @@ import styles from "./styles";
 
 import logoImg from '../../../assets/logo.jpeg'
 
-const payment = [
+const toReceive = [
     {
         id: 1,
-        name: 'Boleto',
+        name: 'Ana',
+        modalitie: 'Zumba',
+        value: 60.00
     },
+
     {
         id: 2,
-        name: 'Paypal',
+        name: 'Jorge',
+        modalitie: 'Hiit',
+        value: 30.00
     },
+
     {
         id: 3,
-        name: 'PagSeguro',
-    },
+        name: 'Carla',
+        modalitie: 'hiit',
+        value: 30.00
+    }
 
 ]
 
-function Payment({name}) {
+function Receive({name, modalitie, value}) {
     return (
         <View style={styles.personalList}>
-            <Feather name='credit-card' size={30} style={styles.icone}></Feather>
-            <Text style={styles.name}>{name}</Text>
+            <Feather name='plus' size={30} style={styles.icone} color='red'></Feather>
+            <View style={styles.boxName}>
+                <Text style={styles.user}>{name}</Text>
+                <View style={styles.boxPay}>
+                    <View style={styles.test}>
+                        <Text style={styles.sport}>{modalitie}</Text>
+                    </View>
+                    
+                </View>
+            </View>
+            <Text style={styles.value}>R$ {value},00</Text>
+            
+
         </View>
     )
 }
 
 
 
-export default function Pay() {
+export default function Receipt() {
 
     const navigation = useNavigation();
 
@@ -52,9 +71,14 @@ export default function Pay() {
         navigation.navigate('User')
     }
 
-    function navigateToReceipt() {
+    function navigateToExtract() {
+        navigation.navigate('Extract')
+    }
+
+    function navigateToPendent() {
         navigation.navigate('Receipt')
     }
+
 
     return (
         <SafeAreaView style={styles.container}>
@@ -63,7 +87,18 @@ export default function Pay() {
             <View style={styles.box}>
                 <View style={styles.header}>
                     <Text style={styles.title}>R$ 120,00</Text>
-                    <Text style={styles.subtitle}>Escolha sua forma de pagamento</Text>
+                    <View style={styles.receipt}>
+                        <TouchableOpacity style={styles.receiptChoice} onPress={navigateToPendent()}>
+                            <Text>
+                                A Receber
+                            </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.receiptChoice} onPress={() => navigateToExtract()}>
+                            <Text>
+                                Recebidos
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
 
@@ -71,21 +106,13 @@ export default function Pay() {
 
                 <FlatList
                     style = {styles.itemList}
-                    data={payment}
+                    data={toReceive}
                     renderItem={({ item }) => (
-                        <Payment name={item.name} />
+                        <Receive name={item.name} modalitie={item.modalitie} value={item.value}/>
                     )}
                     keyExtractor={item => item.id}
                 >
                 </FlatList>
-            </View>
-
-            <View style={styles.receiptButton}>
-                <TouchableOpacity onPress={() => navigateToReceipt() }>
-                    <Text style={styles.buttonText}>
-                        Recibo
-                    </Text>
-                </TouchableOpacity>
             </View>
 
             <View style={styles.menu}>

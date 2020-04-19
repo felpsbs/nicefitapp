@@ -7,6 +7,8 @@ import { useNavigation } from "@react-navigation/native";
 
 import styles from "./styles";
 
+import logoImg from '../../../assets/logo.jpeg'
+
 const usuario = {
     nome: "Lucas Ribeiro",
     idade: "12/09/1988",

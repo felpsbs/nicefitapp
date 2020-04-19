@@ -6,6 +6,8 @@ import { useNavigation } from "@react-navigation/native";
 
 import styles from "./styles";
 
+import logoImg from '../../../assets/logo.jpeg'
+
 const horarios = [
     {
         id: 1,

@@ -23,7 +23,7 @@ export default StyleSheet.create({
         marginBottom: 10,
         marginTop: 20,
         color: '#13131a',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
 
     subtitle: {
@@ -52,5 +52,5 @@ export default StyleSheet.create({
         marginTop: 20,
         marginLeft: 20,
         marginRight: 20
-    }
+    },
 })

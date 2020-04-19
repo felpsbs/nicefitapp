@@ -20,18 +20,17 @@ export default StyleSheet.create({
         alignItems: 'flex-start',
     },
 
+    logoRow: {
+        flexDirection: 'row',
+    },
+
     title: {
         fontSize: 36,
         marginBottom: 10,
         marginTop: 20,
+        marginLeft: 20,
         color: '#13131a',
-        fontWeight: 'bold'
-    },
-    subtitle: {
-        fontSize: 15,
-        marginBottom: 10,
-        color: '#13131a',
-        fontWeight: '300',
+        fontWeight: 'bold',
     },
 
     itemList: {
@@ -92,21 +91,58 @@ export default StyleSheet.create({
     },
 
     content: {
-        height: 380
+        height: 400
+    },
+    
+    receipt: {
+        flexDirection: 'row',
     },
 
-    receiptButton: {
+    receiptChoice: {
         backgroundColor: '#fff',
-        padding: 14,
-        marginLeft: '33%',
-        width: 120,
-        alignItems: 'center',
         borderRadius: 6,
-        marginBottom: 10
+        padding: 10,
+        width: 100,
+        alignItems: 'center',
+        marginRight: 125,
+        marginTop: 20,
+        marginBottom: 20
     },
 
-    buttonText: {
-        fontWeight: '600',
-        fontSize: 16,
+    boxName:{
+        padding: 5,
+        marginLeft: 15
+    },
+
+    user: {
+        fontSize: 20,
+        fontWeight: '700',
+        marginTop: 10
+        
+    },
+
+    boxPay: {
+        marginTop: 20
+    },
+
+    sport: {
+        fontSize: 20,
+    },
+
+
+    boxTest: {
+        marginRight: 20 
+    },
+    cpf:{
+        fontSize: 12,
+        marginTop: 60,
+        marginRight: 20
+        
+    },
+
+    logo: {
+        width: 100,
+        height: 100,
+        alignSelf: 'flex-end'
     }
 })
