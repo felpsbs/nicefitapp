@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View, Text, List } from 'react-native';
+import {Image, SafeAreaView, View, Text, List } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation, useRoute } from "@react-navigation/native";
@@ -27,11 +27,18 @@ export default function MyCalendar() {
         navigation.navigate('User')
     }
 
+    function navigateToGradeHoraria(){
+        navigation.navigate('GradeHoraria')
+    }
+
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.box}>
                 <View style={styles.header}>
-                    <Text style={styles.title}>Meu calendário</Text>
+                    <View style={styles.logoRow}>
+                        <Image source={logoImg} style={styles.logo}></Image>
+                        <Text style={styles.title}>Calendário</Text>
+                    </View>
                     <Text style={styles.subtitle}>Confira seus horários!</Text>
                 </View>
                 
@@ -46,7 +53,15 @@ export default function MyCalendar() {
                         '2012-05-18': {disabled: true}
                       }}>
 
-                </Calendar>
+            </Calendar>
+
+            <View style={styles.agenda}>
+                <TouchableOpacity onPress={() => navigateToGradeHoraria()}>
+                    <Text style= {styles.agendaText}>
+                        Agenda
+                    </Text>
+                </TouchableOpacity>
+            </View>
 
 
             <View style={styles.menu}>

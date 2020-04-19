@@ -8,7 +8,8 @@ import Modalidades from './pages/Modalidades'
 import Payment from './pages/Payment';
 import Chat from './pages/Message';
 import Receipt from './pages/Receipt';
-import Extract from './pages/Extract'
+import Extract from './pages/Extract';
+import GradeHoraria from './pages/GradeHoraria';
 
 const AppStack = createStackNavigator();
 
@@ -24,6 +25,9 @@ export default function Routes(){
                 <AppStack.Screen name='Chat' component={Chat}/>
                 <AppStack.Screen name='Receipt' component={Receipt}/>
                 <AppStack.Screen name='Extract' component={Extract}/>
+                <AppStack.Screen name='GradeHoraria' component={GradeHoraria}/>
+
+                
             </AppStack.Navigator>
         </NavigationContainer>
     )

@@ -14,6 +14,10 @@ export default StyleSheet.create({
         padding: 20
     },
 
+    logoRow: {
+        flexDirection: 'row',
+    },
+
     header: {
         alignItems: 'flex-start',
     },
@@ -24,11 +28,12 @@ export default StyleSheet.create({
         marginTop: 20,
         color: '#13131a',
         fontWeight: 'bold',
+        marginLeft: 20
     },
 
     subtitle: {
         fontSize: 15,
-        marginBottom: 10,
+        marginTop: 10,
         color: '#13131a',
         fontWeight: '300',
     },
@@ -49,8 +54,31 @@ export default StyleSheet.create({
         padding: 10
     },
     calendar: {
-        marginTop: 20,
+        marginTop: 5,
         marginLeft: 20,
         marginRight: 20
     },
+
+    agenda: {
+        backgroundColor: '#42f5ec',
+        alignContent: 'center',
+        marginLeft: '30%',
+        marginRight: '30%',
+        marginTop: 25,
+        borderRadius: 6,
+        
+    },
+
+    agendaText: {
+        fontSize: 16,
+        fontWeight: '600',
+        textAlign: 'center',
+        paddingTop: 8,
+        paddingBottom: 8
+    },
+
+    logo: {
+        width: 100,
+        height: 100
+    }
 })

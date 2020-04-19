@@ -27,6 +27,8 @@ export default StyleSheet.create({
         color: '#13131a',
         fontWeight: 'bold'
     },
+
+    
     subtitle: {
         fontSize: 15,
         marginBottom: 10,
@@ -67,7 +69,9 @@ export default StyleSheet.create({
     },
 
     informacoes: {
-        paddingTop: 10
+        paddingTop: 10,
+        paddingLeft: 20,
+        paddingBottom: 20
     },
 
     nomeAula: {
@@ -84,7 +88,7 @@ export default StyleSheet.create({
         fontWeight: '400',
     },
     scheduleList: {
-        backgroundColor: '#FFF',
+        backgroundColor: '#42f5ec',
         margin: 20,
         borderRadius: 10,
     },

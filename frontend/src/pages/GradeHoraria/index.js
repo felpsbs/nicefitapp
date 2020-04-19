@@ -46,7 +46,7 @@ function Horario({ nomeAula, nomeAluno, data, horario }) {
     )
 }
 
-export default function Chat() {
+export default function GradeHoraria() {
 
     const navigation = useNavigation();
 
