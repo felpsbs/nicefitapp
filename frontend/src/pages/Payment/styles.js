@@ -25,11 +25,12 @@ export default StyleSheet.create({
         marginBottom: 10,
         marginTop: 20,
         color: '#13131a',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        marginLeft: 20
     },
     subtitle: {
         fontSize: 15,
-        marginBottom: 10,
+        marginTop: 10,
         color: '#13131a',
         fontWeight: '300',
     },
@@ -92,7 +93,7 @@ export default StyleSheet.create({
     },
 
     content: {
-        height: 380
+        height: 370
     },
 
     receiptButton: {
@@ -102,7 +103,7 @@ export default StyleSheet.create({
         width: 120,
         alignItems: 'center',
         borderRadius: 6,
-        marginBottom: 10
+        marginBottom: 8
     },
 
     buttonText: {

@@ -24,12 +24,13 @@ export default StyleSheet.create({
         fontSize: 36,
         marginBottom: 10,
         marginTop: 20,
+        marginLeft: 5,
         color: '#13131a',
         fontWeight: 'bold'
     },
     subtitle: {
         fontSize: 15,
-        marginBottom: 10,
+        marginTop: 10,
         color: '#13131a',
         fontWeight: '300',
     },
@@ -67,11 +68,13 @@ export default StyleSheet.create({
     },
 
     informacoes: {
-        paddingTop: 10
+        paddingTop: 10,
+        paddingLeft: 20,
+        paddingBottom: 10
     },
 
     nomeAula: {
-        padding: 25,
+        padding: 20,
         fontSize: 20,
         fontWeight: '600'
     },
@@ -83,14 +86,15 @@ export default StyleSheet.create({
         fontSize: 16,
         fontWeight: '400',
     },
+
     scheduleList: {
-        backgroundColor: '#FFF',
+        backgroundColor: '#42f5ec',
         margin: 20,
         borderRadius: 10,
     },
 
     content:{
-        height: 450
+        height: 400
     },
 
     icone: {

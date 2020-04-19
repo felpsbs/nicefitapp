@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView , View, Text, List } from 'react-native';
+import {SafeAreaView , View, Text, Image} from 'react-native';
 import {Feather} from '@expo/vector-icons';
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from "@react-navigation/native";

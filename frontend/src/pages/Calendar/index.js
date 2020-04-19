@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, SafeAreaView, View, Text, List } from 'react-native';
+import { Image, SafeAreaView, View, Text, List } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation, useRoute } from "@react-navigation/native";
@@ -15,19 +15,19 @@ export default function MyCalendar() {
     const navigation = useNavigation();
 
 
-    function navigateToDiscover(){
+    function navigateToDiscover() {
         navigation.navigate('Discover')
     }
 
-    function navigateToCalendar(){
+    function navigateToCalendar() {
         navigation.navigate('Calendar')
     }
 
-    function navigateToProfile(){
+    function navigateToProfile() {
         navigation.navigate('User')
     }
 
-    function navigateToGradeHoraria(){
+    function navigateToGradeHoraria() {
         navigation.navigate('GradeHoraria')
     }
 
@@ -41,41 +41,44 @@ export default function MyCalendar() {
                     </View>
                     <Text style={styles.subtitle}>Confira seus horários!</Text>
                 </View>
-                
+
             </View>
 
             <Calendar
-                    style={styles.calendar}
-                    onDayPress={(day) => {console.log('selected day', day)}}
-                    markedDates={{
-                        '2020-04-18': {selected: true, marked: true},
-                        '2012-05-17': {marked: true},
-                        '2012-05-18': {disabled: true}
-                      }}>
+                style={styles.calendar}
+                onDayPress={(day) => { console.log('selected day', day) }}
+                markedDates={
+                    {
+                        '2020-04-27': { selected: true, marked: true },
+                        '2020-04-22': { marked: true, selected:true},
+                        '2020-04-24': { marked: true, selected:true}
+                    }
+
+                    }>
 
             </Calendar>
 
-            <View style={styles.agenda}>
-                <TouchableOpacity onPress={() => navigateToGradeHoraria()}>
-                    <Text style= {styles.agendaText}>
-                        Agenda
+        <View style={styles.agenda}>
+            <TouchableOpacity onPress={() => navigateToGradeHoraria()}>
+                <Text style={styles.agendaText}>
+                    Agenda
                     </Text>
-                </TouchableOpacity>
-            </View>
+            </TouchableOpacity>
+        </View>
 
 
-            <View style={styles.menu}>
-                <TouchableOpacity onPress={() => navigateToDiscover()}>
-                    <Feather name="compass" size={40} style={styles.icon}  ></Feather>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigateToCalendar()}>
-                    <Feather name="calendar" size={40} style={styles.icon}  ></Feather>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigateToProfile()}>
-                    <Feather name="user" size={40} style={styles.icon}  ></Feather>
-                </TouchableOpacity>
-            </View>
+        <View style={styles.menu}>
+            <TouchableOpacity onPress={() => navigateToDiscover()}>
+                <Feather name="compass" size={40} style={styles.icon}  ></Feather>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigateToCalendar()}>
+                <Feather name="calendar" size={40} style={styles.icon}  ></Feather>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigateToProfile()}>
+                <Feather name="user" size={40} style={styles.icon}  ></Feather>
+            </TouchableOpacity>
+        </View>
 
-        </SafeAreaView>
+        </SafeAreaView >
     )
 }

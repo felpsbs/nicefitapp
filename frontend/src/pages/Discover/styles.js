@@ -25,18 +25,19 @@ export default StyleSheet.create({
         marginBottom: 10,
         marginTop: 20,
         color: '#13131a',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        marginLeft: 20
     },
     subtitle: {
         fontSize: 15,
-        marginBottom: 10,
+        marginTop: 10,
         color: '#13131a',
         fontWeight: '300',
     },
 
     modalities: {
         fontSize: 20,
-        marginTop: 55,
+        marginTop: 40,
         fontWeight: '500'
     },
 
