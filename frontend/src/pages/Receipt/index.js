@@ -86,7 +86,10 @@ export default function Receipt() {
 
             <View style={styles.box}>
                 <View style={styles.header}>
-                    <Text style={styles.title}>R$ 120,00</Text>
+                    <View style={styles.logoRow}>
+                        <Image source={logoImg} style={styles.logo}></Image>
+                        <Text style={styles.title}>R$ 120,00</Text>
+                    </View>
                     <View style={styles.receipt}>
                         <TouchableOpacity style={styles.receiptChoice} onPress={navigateToPendent()}>
                             <Text>

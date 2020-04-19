@@ -128,5 +128,15 @@ export default StyleSheet.create({
         marginRight: 30,
         fontSize: 16,
         fontWeight: '500'
-    }
+    },
+
+    logo: {
+        width: 100,
+        height: 100,
+        alignSelf: 'flex-end'
+    },
+
+    logoRow: {
+        flexDirection: 'row',
+    },
 })

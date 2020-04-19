@@ -81,7 +81,10 @@ export default function Modalidades() {
 
             <View style={styles.box}>
                 <View style={styles.header}>
-                    <Text style={styles.title}>Personal</Text>
+                    <View style={styles.logoRow}>
+                        <Image source={logoImg} style={styles.logo}></Image>
+                        <Text style={styles.title}>Personal</Text>
+                    </View>
                     <Text style={styles.subtitle}>Quem melhor combina com você?</Text>
                 </View>
             </View>

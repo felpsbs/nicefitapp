@@ -108,5 +108,15 @@ export default StyleSheet.create({
     buttonText: {
         fontWeight: '600',
         fontSize: 16,
-    }
+    },
+
+    logo: {
+        width: 100,
+        height: 100,
+        alignSelf: 'flex-end'
+    },
+
+    logoRow: {
+        flexDirection: 'row',
+    },
 })

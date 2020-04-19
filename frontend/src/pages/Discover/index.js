@@ -75,7 +75,10 @@ export default function Discover() {
         <SafeAreaView style={styles.container}>
             <View style={styles.box}>
                 <View style={styles.header}>
-                    <Text style={styles.title}>Descubra</Text>
+                    <View style={styles.logoRow}>
+                        <Image source={logoImg} style={styles.logo}></Image>
+                        <Text style={styles.title}>Descubra</Text>
+                    </View>
                     <Text style={styles.subtitle}>Encontre seu personal!</Text>
                 </View>
 

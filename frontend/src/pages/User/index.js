@@ -41,7 +41,10 @@ export default function Discover() {
         <SafeAreaView style={styles.container}>
             <View style={styles.box}>
                 <View style={styles.header}>
-                    <Text style={styles.title}>Perfil</Text>
+                    <View style={styles.logoRow}>
+                        <Image source={logoImg} style={styles.logo}></Image>
+                        <Text style={styles.title}>Perfil</Text>                        
+                    </View>
                 </View>
                 <View>
                     <Feather name='user' size={60}></Feather>

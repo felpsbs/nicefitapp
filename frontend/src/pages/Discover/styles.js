@@ -76,5 +76,15 @@ export default StyleSheet.create({
         alignItems: 'center',
         marginLeft: 30,
         padding: 10
-    }
+    },
+
+    logo: {
+        width: 100,
+        height: 100,
+        alignSelf: 'flex-end'
+    },
+
+    logoRow: {
+        flexDirection: 'row',
+    },
 })

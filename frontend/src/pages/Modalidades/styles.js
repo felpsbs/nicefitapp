@@ -98,5 +98,15 @@ export default StyleSheet.create({
 
     content: {
         height: 400
-    }
+    },
+
+    logo: {
+        width: 100,
+        height: 100,
+        alignSelf: 'flex-end'
+    },
+
+    logoRow: {
+        flexDirection: 'row',
+    },
 })

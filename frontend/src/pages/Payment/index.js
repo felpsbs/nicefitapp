@@ -62,7 +62,10 @@ export default function Pay() {
 
             <View style={styles.box}>
                 <View style={styles.header}>
-                    <Text style={styles.title}>R$ 120,00</Text>
+                    <View style={styles.logoRow}>                    
+                        <Image source={logoImg} style={styles.logo}></Image>
+                        <Text style={styles.title}>R$ 120,00</Text>
+                    </View>
                     <Text style={styles.subtitle}>Escolha sua forma de pagamento</Text>
                 </View>
             </View>
