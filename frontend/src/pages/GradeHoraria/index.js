@@ -46,7 +46,7 @@ function Horario({ nomeAula, nomeAluno, data, horario }) {
     )
 }
 
-export default function GradeHoraria() {
+export default function Chat() {
 
     const navigation = useNavigation();
 
@@ -67,7 +67,10 @@ export default function GradeHoraria() {
 
             <View style={ styles.box }>
                 <View style={ styles.header }>
-                    <Text style={ styles.title }>Meus horários</Text>
+                    <View style={styles.logoRow}>
+                        <Image source={logoImg} style={styles.logo}></Image>
+                        <Text style={ styles.title }>Meus horários</Text>
+                    </View>
                     <Text style={ styles.subtitle }>Horários marcados para hoje.</Text>
                 </View>
             </View>
